@@ -19,13 +19,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 class SortException extends Exception{
-
-    private boolean b1;
-    public boolean Check(){return b1;}
-    public SortException(String message, boolean b){
-
+    public SortException(String message) {
         super(message);
-        b1=b;
     }
 }
 
@@ -98,7 +93,7 @@ class myVector {
         }
     }
     // checking whether all elements of vector are in ordered form
-    public boolean Check() /* throws SortException */{
+    public boolean Check() throws SortException {
         if (N[0] < N[1]) {
             for (int i = 1; i < Z - 1; i++) {
                 if (N[i] < N[i+1]) {
@@ -117,15 +112,15 @@ class myVector {
                     b = false;
             }
         }
-        /* if (!b)  throw new SortException("Vector isn't in ordered form!", b); */
+        if (!b)  throw new SortException("Vector isn't in ordered form!");
         return b;
     }
     public void OutResForm(){
         if (Check()){
-            System.out.println("All elements of vector are in ordered form!");
+            System.out.println("All elements of vector is in ordered form!");
         }
         else
-            System.out.println("Vector aren't in ordered form!");
+            System.out.println("Vector isn't in ordered form!");
     }
     //finding arithmetical and geometrical progressions
     public double ArithmeticP(){
