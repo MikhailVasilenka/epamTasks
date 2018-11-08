@@ -117,7 +117,7 @@ class myVector {
     }
     public void OutResForm(){
         if (Check()){
-            System.out.println("All elements of vector is in ordered form!");
+            System.out.println("All elements of vector are in ordered form!");
         }
         else
             System.out.println("Vector isn't in ordered form!");
